@@ -1,0 +1,33 @@
+Assume 16-bit values.				
+				
+Hexadecimal	Unsigned Decimal	Signed Decimal	Octal	Binary
+-	-	11312	026060	0010 1100 0011 0000
+80C9	32969	-32567	-	-
+7DF8	-	-	076770	0111 1101 1111 1000
+FFE2	65506	-30	-	1111 1111 1110 0010
+FEFD	-	-259	177375	-
+				
+Assume signed 16-bit arithmetic.				
+				
+	Saturated Sum	Modular Sum	Carry? (y/n)	Overflow? (y/n)
+0236 + 02E6	051C	051C	n	n
+9682 + E1B6	8000	7838	y	y
+7FC3 + 004B	7FFF	800E	n	y
+				
+Assume single-precision IEEE 754.				
+				
+Hexadecimal	Binary Scientific Notation	Decimal		
+92 40 00 00	-1.1 x 2^(-91)	-		
+C2 08 00 00	-1.0001 x 2^(5)	-34.0		
+EA 90 00 00	-1.001 x 2^(86)	-		
+43 C4 00 00	1.10001 x 2^(8)	392		
+BF 70 00 00	-	-0.9375		
+0A 20 00 00	1.01 x 2^(-107)	-		
+3E D0 00 00	1.101 x 2^(-2)	0.40625		
+44 AE 18 00	-	1392.75		
+				
+Assume double-precision IEEE 754.				
+				
+Hexadecimal	Binary Scientific Notation	Decimal		
+1F F0 00 00 00 00 00 00	1.0 x 2^(-512)	-		
+C0 71 00 00 00 00 00 00	-1.0001 x 2^(8)	-272.0		
